@@ -85,7 +85,7 @@ The configuration files for the experiments are located in the `config` director
 |feature_map_path|Path|Directory containing feature maps and SCL embedding tables.|
 |dense_lr|Float|Learning rate for the dense components of the model (e.g., DNN layers).|
 |sparse_lr|Float|Learning rate of the sparse part of the model (embeddings).|
-|keep_top|Int|Learning rate for the sparse components (e.g., embedding layers).|
+|keep_top|Int|Top-K of GSU.|
 |item_id_p90|Bool|If `true`, uses a simplified item ID vocabulary of size 35M, covering 90% of user historical interactions and 100% of target items; otherwise, uses the full vocabulary of 243M entries.|
 |scl_emb_p90|Bool|If `true`, uses a simplified SCL embedding table of size 35M (same coverage as above); currently, only the simplified version is supported.|
 |feature_map_on_cuda|Bool|If `true`, ID remapping is performed on GPU; otherwise, it is executed on CPU.|
