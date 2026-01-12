@@ -67,7 +67,9 @@ FEATURE_BLOCKS = {
 }
 ```
 
-Apart from the multimodal embeddings, all features are represented as discrete IDs, such as `-58759430334327705`. For each feature field, we first compute the number of unique IDs to determine the vocabulary size (ID_SIZE), then map the original IDs to consecutive integers in the range [0, ID_SIZE). We implement static embeddings using `torch.nn.Embedding`, with the remapped integer IDs serving as input indices. It is important to note that this static embedding implementation differs from the one used in production, which may involve dynamic embeddings.
+Apart from the multimodal embeddings, all features are represented as discrete IDs, such as `-58759430334327705`. For each feature field, we first compute the number of unique IDs to determine the vocabulary size (ID_SIZE), then map the original IDs to consecutive integers in the range `[0, ID_SIZE]`. We implement static embeddings using `torch.nn.Embedding`, with the remapped integer IDs serving as input indices. It is important to note that this static embedding implementation differs from the one used in production, which may involve dynamic embeddings.
+
+📰 **[2026/01/12] We now provide a [notebook](https://github.com/alimama-tech/MUSE/blob/main/data_preprocess.ipynb) as the data processing pipeline.**
 
 ## Run Experiments
 To reproduce the experiments, replace the configuration file in the bash script and run it.
